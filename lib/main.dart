@@ -6,6 +6,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:tutorial/auth_gate.dart';
+import 'package:tutorial/drop_down.dart';
 import 'package:tutorial/firebase_options.dart';
 import 'package:tutorial/login)_page.dart';
 import 'package:tutorial/model.dart';
@@ -30,7 +31,7 @@ class HomePage extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: ModelScreen(),
+      home: TypeAheadScreen(),
     );
   }
 }
@@ -82,8 +83,8 @@ void viewAllData() async {
       .doc('iOWDuto7ybKcvkUzOMuL')
       .get();
   final datas = respoonse.data();
-  Model temp = Model.fromJson(datas!);
-  print(temp.name);
+  // Model temp = Model.fromJson(datas!);
+  // print(temp.name);
 
   // for (var element in datas) {
   //   print(element['name']);
